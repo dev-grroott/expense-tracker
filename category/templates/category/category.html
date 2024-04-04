@@ -14,8 +14,8 @@
         <div style="line-height: 2">
                 {{ category.name }}
                 <span class="float-end" style="font-size: small;">
-                    <a href="#" style="margin-right: 5px;" target="_blank">Edit</a>
-                    <a href="#" style="margin-right: 5px;" target="_blank">Delete</a>
+                    <a href="{% url 'edit_category' category.id %}" style="margin-right: 5px;" target="_blank">Edit</a>
+                    <a href="{% url 'delete_category' category.id %}" style="margin-right: 5px;">Delete</a>
                 </span>
             </span>
         </div>

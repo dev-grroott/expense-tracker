@@ -1,0 +1,35 @@
+{% extends "category/main.html" %}
+
+{% block content %}
+
+<div class="row">
+	<div class="col-sm-0 col-md-1 col-lg-3"></div>
+	<div class="col content">
+            <span>Edit a Category</span>
+            <small class="float-end"><a href="{% url 'list_category' %}">View categories</a></small>
+            <hr>
+            <form method="POST" class="mb-3">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <div class="form-outline mb-5">
+                        <label class="form-label" for="name">Name</label>
+                        {{ form.name }}
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm d-grid mx-auto mb-2">
+                            <button class="btn btn-sm btn-outline-success" type="submit" id="save" name="type" value="save">Update</button>
+                        </div>
+                    </div>			
+                </div>
+            </form>
+
+	</div>
+	<div class="col-sm-0 col-md-1 col-lg-3"></div>
+</div>
+
+{% endblock content %}
+
+
+
